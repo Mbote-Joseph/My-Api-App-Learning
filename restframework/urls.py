@@ -18,5 +18,6 @@ from . import views
 urlpatterns = [
     path('get', views.getBooks, name='getBooks'), 
     path('post', views.postBook, name='postBook'),
-    path('put', views.putBook, name='putBook'),
+    path('put/<int:id>', views.putBook, name='putBook'),
+    path('delete/<int:id>', views.deleteBook, name='deleteBook'),
 ]

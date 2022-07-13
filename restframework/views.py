@@ -30,3 +30,8 @@ def putBook(request, pk):
     return Response(serializer.errors, status=400)
 
     
+@api_view(['DELETE'])
+def deleteBook(request, pk):
+    book = Book.objects.get(pk=pk)
+    book.delete()
+    return Response(status=204)
