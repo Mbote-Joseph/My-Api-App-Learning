@@ -18,4 +18,5 @@ from . import views
 urlpatterns = [
     path('get', views.getBooks, name='getBooks'), 
     path('post', views.postBook, name='postBook'),
+    path('put', views.putBook, name='putBook'),
 ]
