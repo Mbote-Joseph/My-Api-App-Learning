@@ -34,4 +34,4 @@ def putBook(request, pk):
 def deleteBook(request, pk):
     book = Book.objects.get(pk=pk)
     book.delete()
-    return Response(status=204)
+    return Response('Book deleted successfully')
